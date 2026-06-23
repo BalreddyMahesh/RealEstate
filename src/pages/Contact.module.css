@@ -1,0 +1,235 @@
+.page {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  background: var(--bg);
+  padding-bottom: 4rem;
+}
+
+.pageHeader {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.65;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.infoCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.infoCard:hover {
+  border-color: rgba(37,99,235,0.15);
+  box-shadow: var(--shadow-hover);
+}
+
+.infoIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.infoTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.infoLine {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Map */
+.mapCard {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.mapPlaceholder {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg));
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.mapPin { color: var(--primary); }
+
+.mapPlaceholder h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.mapPlaceholder p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Chat Card */
+.chatCard {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.chatIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.chatTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.chatDesc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.75);
+  margin-top: 0.2rem;
+}
+
+.chatBtn {
+  margin-left: auto;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.chatBtn:hover { background: rgba(255,255,255,0.25); }
+
+/* FAQ */
+.faqCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.faqTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.faqItem {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+}
+
+.faqItem:last-child { border-bottom: none; }
+
+.faqQ {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.faqQ::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--primary);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+details[open] .faqQ::after { content: '−'; }
+
+.faqA {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .mainLayout { grid-template-columns: 1fr; }
+  .rightCol { order: -1; }
+}
+
+@media (max-width: 600px) {
+  .infoGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  .infoGrid { grid-template-columns: 1fr; }
+}

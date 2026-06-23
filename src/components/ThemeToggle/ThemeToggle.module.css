@@ -1,0 +1,47 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+}
+
+.icon {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.iconActive {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .iconActive {
+  color: #fbbf24;
+}
+
+/* Track — 47px wide, 25px tall */
+.track {
+  width: 47px;
+  height: 25px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border);
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Thumb — 17px × 17px; top=(25-17)/2=4px centers it; x=3 (light) / x=27 (dark) gives 3px symmetric gaps */
+.thumb {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.45);
+}

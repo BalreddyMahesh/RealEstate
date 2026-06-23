@@ -1,0 +1,311 @@
+/* Services */
+.servicesSection {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--bg-secondary);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.serviceCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.serviceCard:hover {
+  border-color: rgba(37,99,235,0.2);
+  box-shadow: var(--shadow-hover);
+}
+
+.serviceIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.serviceTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.serviceDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.serviceLink:hover { gap: 0.6rem; }
+
+/* Why Section */
+.whySection {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--bg);
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.whyImage {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: visible;
+}
+
+.whyImage img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.whyBadge {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background: var(--gradient-primary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.4);
+}
+
+.badgeNum {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.badgeText {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin-top: 0.25rem;
+}
+
+.whyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.whyDesc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.checkList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.checkList li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.checkIcon { color: var(--success); flex-shrink: 0; }
+
+.whyCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-primary);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 6px 20px rgba(37,99,235,0.35);
+  transition: var(--transition);
+  width: fit-content;
+}
+
+.whyCta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,99,235,0.45); }
+
+/* Cities */
+.citiesSection {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--bg-secondary);
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 240px 200px;
+  gap: 1.25rem;
+}
+
+.cityCard {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+
+.cityCard:first-child {
+  grid-row: 1 / 3;
+}
+
+.cityCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cityCard:hover img { transform: scale(1.08); }
+
+.cityOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+}
+
+.cityInfo {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+}
+
+.cityInfo h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.cityInfo span {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+}
+
+/* CTA */
+.ctaSection {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: var(--bg);
+}
+
+.ctaBox {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-xl);
+  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBox::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.ctaSubtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.ctaBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  color: var(--primary);
+  padding: 1rem 2.25rem;
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: var(--transition);
+}
+
+.ctaBtnPrimary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+
+.ctaBtnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 1rem 2.25rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  transition: var(--transition);
+}
+
+.ctaBtnSecondary:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
+
+@media (max-width: 1024px) {
+  .whyGrid { grid-template-columns: 1fr; }
+  .whyImage img { height: 380px; }
+  .whyBadge { bottom: -16px; right: 0; }
+  .citiesGrid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+  .cityCard:first-child { grid-row: auto; }
+}
+
+@media (max-width: 600px) {
+  .citiesGrid { grid-template-columns: 1fr; }
+  .checkList { grid-template-columns: 1fr; }
+  .servicesGrid { grid-template-columns: 1fr; }
+}
